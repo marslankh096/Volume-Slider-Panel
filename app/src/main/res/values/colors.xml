@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#545082</color>
+    <color name="colorPrimary">#362e67</color>
+    <color name="colorPrimaryDark">#271d50</color>
+
+
+    <color name="back_black">#d01b1f25</color>
+    <color name="black">#000000</color>
+    <color name="emoji2">#ff928f</color>
+    <color name="emoji_o">#ef6c00</color>
+    <color name="green">#00c10a</color>
+    <color name="grey">#aaaaaa</color>
+    <color name="neon_icong">#ff8f00</color>
+    <color name="paresh">#e33b49</color>
+    <color name="seekbg">#909090</color>
+    <color name="seekprogress">#ff0000</color>
+    <color name="seekprogress4">#7c3c21</color>
+    <color name="theme_bg">#e6e6e6</color>
+    <color name="unparesh">#ccc4c4</color>
+    <color name="white">#ffffff</color>
+    <color name="whitetransparent">#dcffffff</color>
+</resources>

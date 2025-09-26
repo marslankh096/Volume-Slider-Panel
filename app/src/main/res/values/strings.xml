@@ -1,0 +1,7 @@
+<resources>
+
+
+    <string name="accessibility_service_description">Accessibility Access This permission allows us to: Detect volume +- key presses. Some devices may require a reboot to start the service.</string>
+    <string name="app_name">Volume Panel</string>
+
+</resources>

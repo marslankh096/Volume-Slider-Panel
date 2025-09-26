@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/banner1"
+        android:background="@drawable/bg">
+
+        <com.rtugeek.android.colorseekbar.ColorSeekBar
+            android:id="@+id/bg_slider"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_10sdp"
+            app:barHeight="@dimen/_5sdp"
+            app:barRadius="@dimen/_10sdp"
+            app:colorSeeds="@array/text_colors"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:showAlphaBar="true"
+            app:thumbHeight="@dimen/_30sdp" />
+
+        <com.demo.volumeslider.view.FontTextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Background"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/colorSlider"
+            app:layout_constraintTop_toBottomOf="@+id/colorSlider" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="12dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/fontTextView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fontTextView3" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.demo.volumeslider.view.FontTextView
+                android:id="@+id/textc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Panel Position"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/textc" />
+
+            <com.demo.volumeslider.view.FontTextView
+                android:id="@+id/fontTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="Vertical Position"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@+id/seekVerticalPos"
+                app:layout_constraintStart_toStartOf="@+id/seekVerticalPos"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias="0.08"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/seekVerticalPos"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:maxHeight="@dimen/_3sdp"
+                android:padding="0dp"
+                app:bsb_bubble_color="@color/colorPrimary"
+                app:bsb_bubble_text_color="@color/white"
+                app:bsb_max="100"
+                app:bsb_progress="0"
+                app:bsb_second_track_color="@color/colorPrimary"
+                app:bsb_section_count="5"
+                app:bsb_section_text_color="@color/black"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_thumb_text_color="@color/black"
+                app:bsb_track_color="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/fontTextView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fontTextView" />
+
+            <com.demo.volumeslider.view.FontTextView
+                android:id="@+id/fontTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="Panel Timeout"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@+id/seektimeout"
+                app:layout_constraintStart_toStartOf="@+id/seektimeout"
+                app:layout_constraintTop_toBottomOf="@+id/seekVerticalPos" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/seektimeout"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="32dp"
+                android:layout_weight="1"
+                android:maxHeight="@dimen/_3sdp"
+                android:padding="0dp"
+                app:bsb_bubble_color="@color/colorPrimary"
+                app:bsb_bubble_text_color="@color/white"
+                app:bsb_max="5"
+                app:bsb_progress="0"
+                app:bsb_second_track_color="@color/colorPrimary"
+                app:bsb_section_count="5"
+                app:bsb_section_text_color="@color/black"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_thumb_text_color="@color/black"
+                app:bsb_track_color="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/btnleft"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fontTextView2" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+                <Button
+                    android:id="@+id/btnleft"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button"
+                    android:text="Left"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnright"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/btnright"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonright"
+                    android:text="Right"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnleft"
+                    app:layout_constraintTop_toBottomOf="@+id/seektimeout" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.demo.volumeslider.view.FontTextView
+            android:id="@+id/fontTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="General Theme:"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <com.rtugeek.android.colorseekbar.ColorSeekBar
+            android:id="@+id/colorSlider"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:paddingLeft="@dimen/_10sdp"
+            app:barHeight="@dimen/_5sdp"
+            app:barRadius="@dimen/_10sdp"
+            app:colorSeeds="@array/text_colors"
+            app:layout_constraintStart_toStartOf="@+id/textc"
+            app:layout_constraintTop_toBottomOf="@+id/textc" />
+
+        <com.demo.volumeslider.view.FontTextView
+            android:id="@+id/textc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Icon Color"
+            android:textColor="@color/black"
+            app:barHeight="@dimen/_5sdp"
+            app:barRadius="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@+id/fontTextView3"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <com.demo.volumeslider.view.FontTextView
+            android:id="@+id/textp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Progress Color"
+            android:textColor="@color/black"
+            app:barHeight="@dimen/_5sdp"
+            app:barRadius="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bg_slider" />
+
+        <com.rtugeek.android.colorseekbar.ColorSeekBar
+            android:id="@+id/colorprogress"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:paddingStart="@dimen/_10sdp"
+            app:barHeight="@dimen/_5sdp"
+            app:barRadius="@dimen/_10sdp"
+            app:colorSeeds="@array/text_colors"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
